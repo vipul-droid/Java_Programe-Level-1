@@ -37,17 +37,40 @@ public class dp{
 
         return Fibonacci;
     }
+    
+    public static int fib_tab(int n, int [] tab){
+        // Meaning of the cell- dp[i] have fibonacci valur i.e dp[i] = dp[i-1] + dp[i-2]
+        // small problem is 0 and 1
+        // Prerequisite
+        tab[0] = 0;
+        tab[1] = 1;
+
+        for(int i=2; i< tab.length; i++){
+            tab[i] = tab[i-1] + tab[i-2];
+        }
+
+        return tab[tab.length-1];
+    }
 
     public static void fib(){
         int n=10;
-        int res = fib_rec(n);
-        System.out.println(res);
-        // int [] arr = int new [n+1];
         // int res = fib_rec(n);
+        int [] arr = new int [n+1];
+        // int res = fib_mem(n, arr);
+        // int res = fib_tab(n, arr);
+        System.out.println(res);
     }
 
+
+    // ********************************Climbs stairs********************************************
+
+     public static int climbStairs_rec(int n){
+         
+     }
+
+    //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Calling question~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     public static void ques(){
-        fib();
+            fib();
     }
     
     public static void main(String[] args) {
